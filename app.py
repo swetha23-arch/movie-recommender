@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"D:\SWETHA\movie recommendation\movies.csv")
+    return pd.read_csv("movies.csv")
 
 movies_data = load_data()
 
@@ -58,3 +58,4 @@ if st.button("Recommend"):
         st.subheader("Movies suggested for you:")
         for i, rec in enumerate(recommendations, 1):
             st.write(f"{i}. {rec}")
+
